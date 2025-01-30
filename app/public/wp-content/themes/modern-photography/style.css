@@ -1,0 +1,190 @@
+/*
+Theme Name: modern-photography
+Theme URI: https://github.com/ineves7
+Author: Iago Neves
+Author URI: https://github.com/ineves7
+Description: Site moderno de fotógrafo e fotografias
+Requires at least: 6.1
+Tested up to: 6.7
+Requires PHP: 5.6
+Version: 1.6
+
+
+/* Reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+} 
+
+/* Reset End */
+
+
+/* ---- MENU ---- */
+
+#header {
+    height: 4.5rem;
+    padding: 2rem 4rem;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background-color: #272727;
+    margin: 0;
+    border-bottom: .5px solid #1a1a1a
+}
+
+
+
+#menu {
+    display: flex;
+    list-style: none;
+    gap: .5rem ;
+}
+
+#menu a, #header a {
+    display: block;
+    padding: .5rem;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #FFFFFF;
+}
+
+#header a h1 {
+  font-size: 32px;
+  font-weight: 300;
+}
+
+#btn-mobile {
+    display: none;
+}
+
+/* ---- Fim do Menu ---- */
+
+@media (max-width: 600px) {
+
+    #menu {
+      display: block;
+      position: absolute;
+      height: 0px;
+      width: 100%;
+      top: 15vh;
+      right: 0px;
+      text-align: center;
+      background-color: #292929;
+      z-index: 1000;
+      transition: .6s;
+      visibility: hidden;
+      overflow-y: hidden;
+      margin: auto 0;
+    }
+    #nav.active #menu {
+      height: calc(100vh - 15vh);
+      visibility: visible;
+      overflow-y: auto;;
+    }
+    #header {
+     margin: auto;
+     height: 15vh;
+     padding: 2rem;
+     border-bottom: .5px solid #5a5a5a
+    }
+    #header a h1 {
+      font-size: 2.2rem;
+    }
+    #menu a {
+      font-weight: 400;
+      font-size: 1.7rem;
+      color: #ffffff;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid #5a5a5a ;
+      transition: .3s;
+    }
+
+    #menu a:hover {
+      background-color: #353E06;
+      font-size: 1.3rem;
+    }
+    #nav.active #menu::-webkit-scrollbar {
+      display: none;
+    }
+
+    #btn-mobile {
+    display: flex;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: .5rem;
+    }
+
+    #hamburguer {
+      display: block;
+      border-top: 2px solid;
+      width: 27px;
+      color: #ffffff
+    }
+
+    #hamburguer::after, #hamburguer::before {
+      content: '';
+      display: block;
+      width: 27px;
+      height: 2px;
+      background: currentColor;
+      margin-top: 7px;
+      transition: .3s;
+    }
+    #nav.active #hamburguer {
+    border-top-color: transparent;
+    }
+
+    #nav.active #hamburguer::before {
+    transform: rotate(135deg);
+    }
+
+    #nav.active #hamburguer::after {
+    transform: rotate(-135deg);
+    margin-top: -2px;
+    }
+    }
+
+

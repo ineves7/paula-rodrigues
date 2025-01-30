@@ -1,0 +1,13 @@
+Temperos {
+    Nome:
+    Nome Científico:
+    Categoria:
+    Origem:
+    Descrição:
+    Usos Culinários:
+    Beneficios:
+    Sabor:
+    Aroma:
+    Imagem:
+    Tags
+}
