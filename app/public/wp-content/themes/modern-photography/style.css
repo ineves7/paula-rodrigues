@@ -8,9 +8,9 @@ Requires at least: 6.1
 Tested up to: 6.7
 Requires PHP: 5.6
 Version: 1.6
+*/
 
-
-/* Reset */
+/* ------------------------- RESET ------------------------- */
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -21,42 +21,43 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
 ol, ul {
-	list-style: none;
+  list-style: none;
 }
 blockquote, q {
-	quotes: none;
+  quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
+  content: '';
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
-} 
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* ----------------------- RESET END ----------------------- */
 
-/* Reset End */
 
+/* -------------------- FONT-FACE -------------------- */
 @font-face {
   font-family: "LeJourSerif";
   /* Ajuste o caminho caso esteja em outra pasta */
@@ -65,21 +66,16 @@ table {
   font-style: normal;
 }
 
-
-
-/* ---- Fonts ---- */
-
+/* ---------------------- FONTS ---------------------- */
 body, p, ul, l1, a, h3 {
   font-family: "Roboto", serif;
   color: #F3F2EF;
 }
-
 h1, h2 {
   font-family: "LeJourSerif", serif;
   color: #F3F2EF;
 }
-
-/* ---- Fonts FIM ---- */
+/* -------------------- FONTS END -------------------- */
 
 html {
   background-color: #222222;
@@ -89,45 +85,43 @@ body {
   padding: 0 200px;
 }
 
+/* ---------------------- LOGO ----------------------- */
 #logo {
   font-size: 1rem;
 }
 
-/* ---- MENU ---- */
-
+/* ---------------------- MENU ----------------------- */
 #header {
-    height: 4.5rem;
-    padding: 2rem 4rem;
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-    box-sizing: border-box;
-    background-color: #222222;
-    margin: 0;
-    border-bottom: .5px solid #1a1a1a
+  height: 4.5rem;
+  padding: 2rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background-color: #222222;
+  margin: 0;
+  border-bottom: .5px solid #1a1a1a
 }
 
-
-
 #menu {
-    display: flex;
-    list-style: none;
-    gap: .5rem ;
+  display: flex;
+  list-style: none;
+  gap: .5rem;
 }
 
 #menu a, #header a {
-    display: block;
-    padding: .5rem;
-    text-decoration: none;
-    font-size: 1rem;
-    color: #F3F2EF;
+  display: block;
+  padding: .5rem;
+  text-decoration: none;
+  font-size: 1rem;
+  color: #F3F2EF;
 }
 
-#menu a:hover, 
+#menu a:hover,
 #header a:hover {
-    color: #A3E594; /* exemplo: dourado */
-    background-color: #333; /* exemplo: fundo cinza escuro */
-    transition: background-color 0.3s ease, color 0.3s ease;
+  color: #A3E594;
+  background-color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #header a h1 {
@@ -136,160 +130,151 @@ body {
 }
 
 #btn-mobile {
-    display: none;
+  display: none;
 }
 
-/* ---- Fim do Menu ---- */
+/* -------------------- FIM MENU --------------------- */
 
-/* ---- Banner ---- */
 
+/* -------------------- BANNER ----------------------- */
 /* Container do banner */
 .banner {
-  width: 100%;               /* Ajuste a largura do banner */
-  height: 500px;             /* Ajuste a altura do banner conforme seu projeto */
-  position: relative;        /* Importante para posicionar conteúdo dentro */
-  overflow: hidden;          /* Caso queira cortar partes da imagem que excedem a área */
+  width: 100%;
+  height: 500px;       /* Ajuste a altura conforme seu projeto */
+  position: relative;
+  overflow: hidden;
 }
 
 /* Imagem do banner */
 .banner-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;         /* Corta a imagem para preencher sem distorcer */
-  position: absolute;        /* Para permitir que o conteúdo fique sobreposto */
+  object-fit: cover;
+  position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;                /* A imagem fica "atrás" do conteúdo */
+  z-index: 1; /* Fica atrás do conteúdo textual */
 }
 
 /* Conteúdo textual do banner */
 .banner-content {
-  position: relative;        /* Para ficar sobre a imagem */
-  z-index: 2;                /* Fica "acima" da imagem */
-  width: 100%;               /* Ocupa toda a largura */
-  height: 100%;              /* Se quiser centralizar verticalmente, pode usar flex, etc. */
+  position: relative;
+  z-index: 2; /* Fica acima da imagem */
+  width: 100%;
+  height: 100%;
 
-  /* Exemplo de centralização vertical e horizontal */
   display: flex;
   flex-direction: column;
-  justify-content: center;   /* Alinha vertical */
-  align-items: center;       /* Alinha horizontal */
-  text-align: center;        /* Centraliza texto */
-  color: #fff;               /* Cor do texto */
-  background: rgba(0,0,0,0); /* Transparente. Se quiser sobreposição, mude p. algo como rgba(0,0,0,0.4) */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff; 
+  background: rgba(0,0,0,0); 
   padding: 1rem;
 }
 
-/* Título e descrição: facilmente editáveis */
 .banner-content h1 {
-  font-size: 2.5rem;         /* Ajuste o tamanho do título */
-  margin-bottom: 0.5rem;     /* Espaço entre h1 e p */
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
 }
 .banner-content p {
   font-size: 1.2rem;
-  max-width: 600px;          /* Ajuste para quebrar em telas grandes */
-  margin: 0 auto;            /* Centraliza horizontal */
+  max-width: 600px;
+  margin: 0 auto;
 }
+/* ------------------ FIM BANNER --------------------- */
 
-/* ----  Fim do Banner ---- */
 
-/* ---- Section Sobre Mim ---- */
-
-/* SECTION em GRID */
+/* ---------------- SECTION SOBRE MIM --------------- */
 .section-grid {
-  /* Você pode alterar min-height para height fixa ou deixar auto */
-  min-height: 400px; /* Exemplo de altura "modificável" */
+  min-height: 400px;
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 1rem; /* espaço entre colunas */
+  gap: 1rem;
   padding: 25px 0;
 }
 
-/* Coluna de texto (2/3) */
 .text-container {
-  display: flex; 
-  flex-direction: column; 
-  justify-content: center; /* Centraliza verticalmente, se desejar */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 1rem;
-  background-color: #f4f4f4; /* Exemplo de fundo, opcional */
+  background-color: #475045; /* Exemplo, pode remover */
+  color: #F3F2EF;
+  padding: 4rem;
 }
 
-/* Coluna de imagem (1/3) */
 .image-container {
   display: flex;
-  align-items: center;     /* Centraliza verticalmente a imagem */
-  justify-content: center; /* Centraliza horizontalmente a imagem */
-  background-color: #e0e0e0; /* Exemplo de fundo, opcional */
+  align-items: center;
+  justify-content: center;
+  background-color: #e0e0e0; /* Exemplo, pode remover */
 }
 
-/* Ajuste de imagem */
 .image-container img {
   max-width: 100%;
   height: auto;
   display: block;
 }
+/* ------------- FIM SECTION SOBRE MIM -------------- */
 
-/* ---- Fim da section Sobre Mim ---- */
 
-/* ---- SECTION de Portfólio ---- */
+/* ------------- SECTION DE PORTFÓLIO -------------- */
 .portfolio-section {
   padding: 2rem;
 }
 
-/* CONTAINER CENTRALIZADO */
 .portfolio-container {
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
 }
 
-/* TÍTULO PRINCIPAL DO PORTFÓLIO */
 .portfolio-container h2 {
   font-size: 2rem;
+  margin: 2rem 0 4rem 0;
+
+}
+
+/* Grade fixa em 3 colunas (não quebra no desktop) */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 1.5rem;
   margin-bottom: 2rem;
 }
 
-/* GRID COM 3 COLUNAS FIXAS */
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  margin-bottom: 2rem; /* Espaço antes do botão */
-}
-
-/* CADA ITEM (TÍTULO + CARD) */
+/* Cada item (Título + Card) */
 .portfolio-item {
   display: flex;
   flex-direction: column;
-  align-items: center; 
-  /* Título fica no topo, imagem no card */
+  align-items: center;
+  margin-top: 2rem;
 }
 
-/* TÍTULO DE CADA ITEM */
 .portfolio-item h3 {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
-/* CARD - APENAS IMAGEM */
+/* Card - imagem preenche tudo */
 .card {
   width: 100%;
-  height: 250px;       /* Altura fixa */
+  height: 250px;
   border-radius: 8px;
   overflow: hidden;
   background-color: #2E322F;
 }
 
-/* IMAGEM PREENCHENDO O CARD */
 .card img {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
+  object-fit: cover;
   display: block;
 }
 
-/* BOTÃO "VER MAIS" */
+/* Botão "Ver Mais" */
 .btn-ver-mais {
   background-color: #2E322F;
   color: #fff;
@@ -304,59 +289,122 @@ body {
 .btn-ver-mais:hover {
   background-color: #3A403B;
 }
-/* ---- Fim da section Portfólio ---- */  
+
+h2::after {
+  content: "";
+  display: block;
+  width: 80px;            /* Largura da linha */
+  height: 2px;           /* Espessura da linha */
+  background-color: #333333;  /* Cor discreta */
+  margin: 0.5rem auto 0; /* 0.5rem acima, auto nas laterais p/ centralizar, 0 abaixo */
+}
+/* ------------ FIM SECTION PORTFÓLIO -------------- */
 
 
+/* =============== MEDIA QUERY (Versão Mobile) =============== */
 
 @media (max-width: 600px) {
 
-    #menu {
-      display: block;
-      position: absolute;
-      height: 0px;
-      width: 100%;
-      top: 15vh;
-      right: 0px;
-      text-align: center;
-      background-color: #292929;
-      z-index: 1000;
-      transition: .6s;
-      visibility: hidden;
-      overflow-y: hidden;
-      margin: auto 0;
-    }
-    #nav.active #menu {
-      height: calc(100vh - 15vh);
-      visibility: visible;
-      overflow-y: auto;;
-    }
-    #header {
-     margin: auto;
-     height: 15vh;
-     padding: 2rem;
-     border-bottom: .5px solid #5a5a5a
-    }
-    #header a h1 {
-      font-size: 1.5rem;
-    }
-    #menu a {
-      font-weight: 400;
-      font-size: 1.7rem;
-      color: #F3F2EF;
-      padding: 1.5rem 0;
-      border-bottom: 1px solid #5a5a5a ;
-      transition: .3s;
-    }
+  /* Remove padding lateral do body para aproveitar espaço em mobile */
+  body {
+    padding: 0 1rem;
+  }
 
-    #menu a:hover {
-      background-color: #353E06;
-      font-size: 1.3rem;
-    }
-    #nav.active #menu::-webkit-scrollbar {
-      display: none;
-    }
+  /* Diminuir altura do banner se quiser */
+  .banner {
+    height: 300px;
+  }
 
-    #btn-mobile {
+  /* Sobre Mim: empilhado em uma única coluna */
+  .section-grid {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .text-container, .image-container {
+    background-color: inherit; /* Se quiser remover cor de fundo */
+    padding: 1rem;
+  }
+
+  /* Portfólio: muda para 1 coluna (ou 2 colunas se preferir) */
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .portfolio-item {
+    border-top: #222222 solid 2px;
+    margin-top: 1rem;
+  }
+
+
+  .portfolio-item h3 {
+    font-size: 1.5rem;
+  }
+
+  .portfolio-container h2 {
+    font-size: 2rem;
+    margin: 0 0 2rem 0;
+  }
+
+  .btn-ver-mais {
+    margin-top: 1.5rem;
+    width: 40vw;
+  }
+
+  /* MENU Responsivo */
+  #menu {
+    display: block;
+    position: absolute;
+    height: 0px;
+    width: 100%;
+    top: 15vh;
+    right: 0px;
+    text-align: center;
+    background-color: #292929;
+    z-index: 1000;
+    transition: .6s;
+    visibility: hidden;
+    overflow-y: hidden;
+    margin: auto 0;
+  }
+
+  #nav.active #menu {
+    height: calc(100vh - 15vh);
+    visibility: visible;
+    overflow-y: auto;
+  }
+
+  #header {
+    margin: auto;
+    height: 15vh;
+    padding: 2rem;
+    border-bottom: .5px solid #5a5a5a;
+  }
+
+  #header a h1 {
+    font-size: 1.5rem;
+  }
+
+  #menu a {
+    font-weight: 400;
+    font-size: 1.7rem;
+    color: #F3F2EF;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #5a5a5a ;
+    transition: .3s;
+  }
+
+  #menu a:hover {
+    background-color: #353E06;
+    font-size: 1.3rem;
+  }
+
+  #nav.active #menu::-webkit-scrollbar {
+    display: none;
+  }
+
+  #btn-mobile {
     display: flex;
     padding: .5rem 1rem;
     font-size: 1rem;
@@ -364,36 +412,31 @@ body {
     background: none;
     cursor: pointer;
     gap: .5rem;
-    }
+  }
 
-    #hamburguer {
-      display: block;
-      border-top: 2px solid;
-      width: 27px;
-      color: #ffffff
-    }
-
-    #hamburguer::after, #hamburguer::before {
-      content: '';
-      display: block;
-      width: 27px;
-      height: 2px;
-      background: currentColor;
-      margin-top: 7px;
-      transition: .3s;
-    }
-    #nav.active #hamburguer {
+  #hamburguer {
+    display: block;
+    border-top: 2px solid;
+    width: 27px;
+    color: #ffffff
+  }
+  #hamburguer::after, #hamburguer::before {
+    content: '';
+    display: block;
+    width: 27px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 7px;
+    transition: .3s;
+  }
+  #nav.active #hamburguer {
     border-top-color: transparent;
-    }
-
-    #nav.active #hamburguer::before {
+  }
+  #nav.active #hamburguer::before {
     transform: rotate(135deg);
-    }
-
-    #nav.active #hamburguer::after {
+  }
+  #nav.active #hamburguer::after {
     transform: rotate(-135deg);
     margin-top: -2px;
-    }
-    }
-
-
+  }
+}
