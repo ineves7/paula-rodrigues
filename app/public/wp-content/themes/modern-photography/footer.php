@@ -88,7 +88,7 @@
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.48188235564!2d-42.02731698555614!3d-22.966933945700128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9697f5c9794361%3A0x9d37331ca66baa8a!2sArraial%20do%20Cabo%2C%20RJ!5e0!3m2!1spt-BR!2sbr!4v1678836634942!5m2!1spt-BR!2sbr"
           width="100%"
           height="250"
-          style="border:0;"
+          style="border-radius:5px;"
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade">
