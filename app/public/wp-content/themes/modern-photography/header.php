@@ -42,4 +42,3 @@
           <!-- <p>Eternizando momentos</p> -->
         </div>
     </div>
-    </div>

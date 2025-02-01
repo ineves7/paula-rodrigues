@@ -4,174 +4,169 @@
 
 .galeria {
     display: grid;
-    /* 10 colunas fracionadas (desktop) */
     grid-template-columns: repeat(10, 1fr);
-    /* 2 linhas com altura fixa (pode ajustar para auto) */
     grid-template-rows: 180px 180px;
     max-width: 1200px;
     margin: 0 auto;
-    border-radius: 5px;
-  }
-  
-  .galeria-item img {
+    overflow: hidden;
+}
+
+.galeria-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-  }
-  
-  /* Layout DESKTOP das 2 linhas */
-  .item1 {
-    grid-column: 1 / span 4; /* ~40% */
-    grid-row: 1;
-  }
-  .item2 {
-    grid-column: 5 / span 3; /* ~30% */
-    grid-row: 1;
-  }
-  .item3 {
-    grid-column: 8 / span 3; /* ~30% */
-    grid-row: 1;
-  }
-  .item4 {
-    grid-column: 1 / span 3; /* ~30% */
-    grid-row: 2;
-  }
-  .item5 {
-    grid-column: 4 / span 3; /* ~30% */
-    grid-row: 2;
-  }
-  .item6 {
-    grid-column: 7 / span 4; /* ~40% */
-    grid-row: 2;
-  }
-  
-  /* Layout MOBILE => 2 linhas => item1(60%), item2(40%), item3(40%), item4(60%) e items 5,6 ocultos */
-  @media (max-width: 768px) {
-    .galeria {
-      grid-template-columns: repeat(10, 1fr);
-      grid-template-rows: 250px 250px; /* Altura maior no mobile */
-    }
-  
-    .item1 {
-      grid-row: 1;
-      grid-column: 1 / span 6; /* ~60% */
-    }
-    .item2 {
-      grid-row: 1;
-      grid-column: 7 / span 4; /* ~40% */
-    }
-    .item3 {
-      grid-row: 2;
-      grid-column: 1 / span 4; /* ~40% */
-    }
-    .item4 {
-      grid-row: 2;
-      grid-column: 5 / span 6; /* ~60% */
-    }
-  
-    .item5, .item6 {
-      display: none;
-    }
-  }
-  
-  /* ========================= */
-  /*      FOOTER-LINHA        */
-  /* (60% / 40%) + nav        */
-  /* ========================= */
-  
-  .footer-linha {
+}
+
+/* Layout DESKTOP das 2 linhas */
+.item1 { grid-column: 1 / span 4; grid-row: 1; }
+.item2 { grid-column: 5 / span 3; grid-row: 1; }
+.item3 { grid-column: 8 / span 3; grid-row: 1; }
+.item4 { grid-column: 1 / span 3; grid-row: 2; }
+.item5 { grid-column: 4 / span 3; grid-row: 2; }
+.item6 { grid-column: 7 / span 4; grid-row: 2; }
+
+/* ========================= */
+/*      FOOTER-LINHA        */
+/* ========================= */
+
+.footer-linha {
     width: 100%;
-    background-color: #111; /* Fundo escuro */
+    background-color: #111;
     margin: 2rem 0 0.5rem 0;
     color: #F3F2EF;
     font-family: "Roboto", sans-serif;
-    text-align: center; /* Centraliza textos */
-  }
-  
-  /* Grid => 2 colunas: 60% e 40% */
-  .linha-grid {
+    text-align: center;
+}
+
+/* Grid 60% / 40% */
+.linha-grid {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 6fr 4fr; /* 60% / 40% */
+    grid-template-columns: 6fr 4fr;
     gap: 2rem;
     align-items: center;
-  }
-  
-  /* Coluna esquerda (60%) */
-  .coluna-60 .logo-like {
+    overflow-x: hidden;
+}
+
+/* Coluna 60% */
+.coluna-60 .logo-like {
     font-family: "LeJourSerif", serif; 
-    color: #A3E594; /* Ajuste conforme logo */
+    color: #A3E594;
     font-size: 2rem;
     margin-bottom: 0.5rem;
-  }
-  .coluna-60 .subtitulo {
+}
+
+.coluna-60 .subtitulo {
     font-size: 1.2rem;
     margin-bottom: 1rem;
-  }
-  
-  /* Redes Sociais => empilhadas, centralizadas */
-  .redes-sociais {
+}
+
+/* Redes Sociais */
+.redes-sociais {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
     margin-top: 1rem;
-  }
-  .rede {
+}
+
+.rede {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     justify-content: center;
-  }
-  .icone {
+}
+
+.icone {
     width: 24px;
     height: 24px;
     object-fit: cover;
-  }
-  
-  /* Nav no rodapé (abaixo das redes sociais) */
-  .footer-nav {
+}
+
+/* ========================= */
+/*      FOOTER NAV FIX       */
+/* ========================= */
+
+.footer-nav {
+    width: 100%;
+    max-width: 100vw;
     margin-top: 2rem;
-  }
-  .footer-nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-nav ul {
     list-style: none;
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
     justify-content: center;
-  }
-  .footer-nav ul li a {
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav ul li {
+    display: inline-block;
+}
+
+.footer-nav ul li a {
     color: #F3F2EF;
     text-decoration: none;
     font-size: 1rem;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  .footer-nav ul li a:hover {
-    color: #A3E594; 
-    background-color: #333; 
-  }
-  
-  /* Coluna direita (40%) => Google Maps */
-  .coluna-40 iframe {
-    width: 100%;
-    height: 250px;
-    border: none;
-  }
-
-  .socialmedia-icon {
-    width: 42px;
-    height: 42px;
+    white-space: nowrap;
 }
-  
-  /* Responsivo para footer-linha */
-  @media (max-width: 768px) {
-    .linha-grid {
-      grid-template-columns: 1fr; /* Vira 1 coluna */
+
+.footer-nav ul li a:hover {
+    color: #A3E594;
+    background-color: #333;
+}
+
+/* Coluna 40% - Google Maps */
+.coluna-40 iframe {
+    width: 100%;
+    height: auto; /* Ajusta a altura automaticamente */
+    aspect-ratio: 16 / 9; /* Mantém proporção de 16:9 */
+    border: none;
+    border-radius: 5px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .coluna-40 iframe {
+        width: 100%;
+        height: 500px; /* Altura fixa menor para mobile */
     }
+    .linha-grid {
+        grid-template-columns: 1fr;
+    }
+
     .redes-sociais {
         margin-top: 1.5rem;
-      }
-  }
-  
+    }
+
+    .footer-nav ul {
+        gap: 1rem;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .footer-nav ul li a {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+    .galeria {
+        grid-template-rows: 120px 120px;
+    }
+
+    .item1 { grid-column: 1 / span 6; grid-row: 1; }
+    .item2 { grid-column: 7 / span 4; grid-row: 1; }
+    .item3 { grid-column: 1 / span 4; grid-row: 2; }
+    .item4 { grid-column: 5 / span 6; grid-row: 2; }
+
+    .item5, .item6 { display: none; }
+}
