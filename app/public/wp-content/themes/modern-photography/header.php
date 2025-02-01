@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/footer.css">
    
         <!-- Wordpress Header -->
         <?php wp_head(); ?>
@@ -29,4 +30,16 @@
             </ul>
         </nav>
     </header>
+    <!-- Banner -->
+    <div class="banner">
+        <img 
+            src="<?php echo get_template_directory_uri(); ?>/assets/img/banner1.png" 
+            alt="Banner 1"
+            class="banner-img"
+        />
+        <div class="banner-content">
+          <h1>Creative Photography</h1>
+          <!-- <p>Eternizando momentos</p> -->
+        </div>
+    </div>
     </div>
