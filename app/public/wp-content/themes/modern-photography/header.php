@@ -25,7 +25,7 @@
             <ul id="menu" role="menu">
                 <li><a href="/">Home</a></li>
                 <li><a href="/">Sobre Mim</a></li>
-                <li><a href="/">Portfólio</a></li>
+                <li><a href="/portfolio">Portfólio</a></li>
                 <li><a href="/">Contato</a></li>
             </ul>
         </nav>
