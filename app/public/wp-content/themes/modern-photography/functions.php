@@ -26,7 +26,6 @@ function meu_tema_enqueue_styles() {
 }
 add_action('wp_enqueue_scripts', 'meu_tema_enqueue_styles');
 
-
 function criar_cpt_albuns() {
     $labels = array(
         'name'               => 'Álbuns',
@@ -57,7 +56,6 @@ function criar_cpt_albuns() {
 }
 add_action( 'init', 'criar_cpt_albuns' );
 
-
 add_action( 'cmb2_admin_init', 'register_album_metabox' );
 function register_album_metabox() {
     $cmb = new_cmb2_box( array(
@@ -75,5 +73,21 @@ function register_album_metabox() {
     ));
 }
 
+add_action ('cmb2_admin_init', 'cmb2_fields_home');
+function cmb2_fields_home() {
+    $cmb2 = new_cmb2_box([
+        'id' => 'home_box',
+        'title' => 'Home',
+        'object_types' => ['page'],
+        'show_on' => [
+            'key' => 'page-template',
+            'value' => 'page-home.php',
+        ],
+    ]);
 
-?>
+    $cmb2->add_field([
+        'name' => 'Sobre-Mim',
+        'id' => 'sobremim',
+        'type' => 'textarea',
+    ]);
+}

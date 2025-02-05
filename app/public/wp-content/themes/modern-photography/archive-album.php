@@ -3,7 +3,7 @@ get_header();
 ?>
 
 <!-- Section PORTFÓLIO -->
-<section class="portfolio-section">
+<section class="portfolio-section" id="portfolio">
     <div class="portfolio-container">
         <h2>PORTFÓLIO</h2>
         
@@ -56,10 +56,8 @@ get_header();
             endif;
             ?>
         </div>
-        
-        <!-- Botão "Ver Mais" -->
-        <button class="btn-ver-mais">Ver Mais</button>
     </div>
+    <hr style="width: 44%;">
 </section>
 
 <?php get_footer(); ?>

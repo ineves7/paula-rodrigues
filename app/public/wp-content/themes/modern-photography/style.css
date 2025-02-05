@@ -79,53 +79,64 @@ body {
   padding: 0 200px;
 }
 
+h2::after {
+  content: "";
+  display: block;
+  width: 80px;       /* Largura da linha (ajuste conforme necessário) */
+  height: 2px;       /* Espessura da linha */
+  background-color: #333; /* Cor da linha */
+  margin: 10px auto; /* Espaço acima/abaixo e centralização */
+}
+
 /* ---------------- SECTION SOBRE MIM --------------- */
 .sobre-mim-section {
-  margin: 3rem 0;
+  margin-top: 2rem;
 }
 .sobre-mim-container {
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
+  padding: 2rem 0;
 }
 .sobre-mim-container h2 {
   font-size: 2rem;
-  margin: 2rem 0 4rem;
   font-family: "LeJourSerif", serif;
+  margin-bottom: 2.5rem;
 }
 .sobre-mim-grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
   align-items: stretch;
 }
-.text-wrapper {
+.text-box {
   background-color: #475045;
   padding: 2rem;
-  text-align: left;
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-radius: 5px 0 0 5px;
 }
-.text-wrapper p {
+.text-box p {
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 1rem;
 }
-.image-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.image-box {
+width: 100%;
 }
-.image-wrapper img {
+.image-box img {
   max-width: 100%;
+  width: 100%;
   height: 400px;
   display: block;
+  border-radius: 0 5px 5px 0;
 }
 /* --- FIM SECTION SOBRE MIM ---- */
 
 /* ---- SECTION PORTFÓLIO ---- */
 .portfolio-section {
-  margin-top: 32px;
+  margin:0;
 }
 .portfolio-container {
   max-width: 1200px;
@@ -135,13 +146,12 @@ body {
 }
 .portfolio-container h2 {
   font-size: 2rem;
-  margin: 0 0 4rem 0;
+  margin-bottom: 2rem;
 }
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-  margin-bottom: 2rem;
   overflow-x: hidden; /* Evita rolagem lateral */
 }
 
@@ -161,7 +171,7 @@ body {
 }
 .portfolio-item h3 {
   font-size: 1.3rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   text-align: center;
 }
 .portfolio-item .card {
@@ -179,16 +189,18 @@ body {
 /* ---------------------- FIM DO CÓDIGO ---------------------- */
 
 .btn-ver-mais {
-  background-color: #475045;
-  color: #fff;
-  border: none;
-  padding: 0.8rem 2rem;
-  font-size: 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin: 0.5rem 0 2.5rem 0;
-  width: 11rem;
+  display: inline-block;      /* Permite definir dimensões e padding */
+  padding: 10px 20px;         /* Espaçamento interno (vertical e horizontal) */
+  background-color: #e7a20c;  /* Cor de fundo do botão */
+  color: #fff;                /* Cor do texto */
+  text-decoration: none;      /* Remove o sublinhado padrão dos links */
+  text-align: center;         /* Centraliza o texto dentro do botão */
+  border-radius: 5px;         /* Bordas arredondadas */
+  font-size: 16px;            /* Tamanho da fonte */
+  cursor: pointer;            /* Cursor de "mão" ao passar o mouse */
+  transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+  width: 5rem;
+  margin: 3rem 0 1rem 0;
 }
 .btn-ver-mais:hover {
   background-color: #3A403B;
@@ -203,6 +215,19 @@ body {
   .sobre-mim-grid {
     grid-template-columns: 1fr;
   }
+
+  .text-box {
+    border-radius: 5px 5px 0 0;
+  }
+  .text-box p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+  .image-box img {
+    height: 500px;
+    border-radius: 0 0 5px 5px;
+  }
+
   .portfolio-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -220,5 +245,9 @@ body {
   }
   .portfolio-section {
     padding: 0 2rem;
+  }
+  .btn-ver-mais {
+    font-size: 1.5rem;
+    width: 7rem;
   }
 }
