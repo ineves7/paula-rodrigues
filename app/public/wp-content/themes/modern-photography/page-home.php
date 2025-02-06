@@ -16,25 +16,24 @@ get_header(); ?>
           <!-- Coluna Esquerda: Texto no fundo verde (#475045) -->
           <div class="text-box">
             <p>
-              Me chamo Paula Rodriguez, Nasci na Argentina, e há 8 anos que moro em 
-              Arraial do Cabo. Sou fotógrafa profissional, formada na 
-              Universidad Nacional de Córdoba Argentina.
+              <?php echo get_post_meta(get_the_ID(), 'sobremim', true); ?>
             </p>
             <p>
-              Atualmente me especializo em fotografia de moda e gastronomia. 
-              Gosto de criar imagens que revalorizem a empresa/produto, 
-              enfatizando a importância dos detalhes, dando mais sofisticação 
-              e qualidade à sua empresa.
+              <?php echo get_post_meta(get_the_ID(), 'sobremim2', true); ?>
             </p>
           </div>
           
           <!-- Coluna Direita: Imagem (sem background verde) -->
+          
           <div class="image-box">
-            <img 
-              src="<?php echo get_template_directory_uri(); ?>/assets/img/paisagem.jpg" 
-              alt="Sobre Mim - Foto"
-            />
-          </div>
+          <?php
+              // Recupera a URL da imagem do post atual
+              $image_url = get_post_meta( get_the_ID(), 'fotosobremim', true );
+
+              if ( $image_url ) {
+                  echo '<img src="' . esc_url( $image_url ) . '" alt="Foto Sobre Mim">';
+              }
+              ?>
           
         </div><!-- /.sobre-mim-grid -->
       </div><!-- /.sobre-mim-container -->

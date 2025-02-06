@@ -97,14 +97,10 @@ function cmb2_fields_home() {
         'type' => 'textarea',
     ]);
     $cmb2->add_field([
-        'name' => 'Sobre-Mim-3',
-        'id' => 'sobremim3',
-        'type' => 'textarea',
-    ]);
-    $cmb2->add_field([
         'name' => 'Foto-Sobre-Mim',
         'id' => 'fotosobremim',
         'type' => 'file',
+        'save_id' => true, // Salva apenas o ID do anexo
     ]);
 
 }
