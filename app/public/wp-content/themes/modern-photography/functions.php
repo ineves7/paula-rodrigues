@@ -86,6 +86,18 @@ function cmb2_fields_home() {
     ]);
 
     $cmb2->add_field([
+        'name' => 'Banner',
+        'id' => 'banner',
+        'type' => 'file',
+    ]);
+
+    $cmb2->add_field([
+        'name' => 'Texto-Banner',
+        'id' => 'textobanner',
+        'type' => 'text',
+    ]);
+
+    $cmb2->add_field([
         'name' => 'Sobre-Mim',
         'id' => 'sobremim',
         'type' => 'textarea',
@@ -102,5 +114,80 @@ function cmb2_fields_home() {
         'type' => 'file',
         'save_id' => true, // Salva apenas o ID do anexo
     ]);
+};
+
+
+function cmb2_fields_footer() {
+    $cmb2 = new_cmb2_box([
+        'id' => 'footer_box',
+        'title' => 'Rodape',
+        'object_types' => ['page'],
+        'show_on' => [
+            'key' => 'page-template',
+            'value' => 'page-footer.php',
+        ],
+    ]);
+    $cmb2->add_field([
+        'name' => 'Foto-1-Galeria',
+        'id' => 'fotogaleria1',
+        'type' => 'file',   
+        'save_id' => true, // Salva apenas o ID do anexo
+    ]);
+    $cmb2->add_field([
+        'name' => 'Foto-2-Galeria',
+        'id' => 'fotogaleria2',
+        'type' => 'file',
+        'save_id' => true, // Salva apenas o ID do anexo
+    ]);
+    $cmb2->add_field([
+        'name' => 'Foto-3-Galeria',
+        'id' => 'fotogaleria3',
+        'type' => 'file',
+        'save_id' => true, // Salva apenas o ID do anexo
+    ]);
+    $cmb2->add_field([
+        'name' => 'Foto-4-Galeria',
+        'id' => 'fotogaleria4',
+        'type' => 'file',
+        'save_id' => true, // Salva apenas o ID do anexo
+    ]);
+    $cmb2->add_field([
+        'name' => 'Foto-5-Galeria',
+        'id' => 'fotogaleria5',
+        'type' => 'file',
+        'save_id' => true, // Salva apenas o ID do anexo
+    ]);
+    $cmb2->add_field([
+        'name' => 'Foto-6-Galeria',
+        'id' => 'fotogaleria6',
+        'type' => 'file',
+        'save_id' => true, // Salva apenas o ID do anexo
+    ]);
+    $cmb2->add_field([
+        'name' => 'Numero-Whatsapp',
+        'id' => 'numerowhatsapp',
+        'type' => 'text'
+    ]);
+    $cmb2->add_field([
+        'name' => 'Link-Whatsapp',
+        'id' => 'linkwhatsapp',
+        'type' => 'text'
+    ]);
+    $cmb2->add_field([
+        'name' => 'Nome-Instagram',
+        'id' => 'nomeinstagram',
+        'type' => 'text'
+    ]);
+    $cmb2->add_field([
+        'name' => 'Link-Instagram',
+        'id' => 'linkinstagram',
+        'type' => 'text'
+    ]);
+    $cmb2->add_field([
+        'name' => 'Google-Map',
+        'id' => 'google-map',
+        'type' => 'text'
+    ]);
 
 }
+    add_action ('cmb2_admin_init', 'cmb2_fields_footer'); 

@@ -97,6 +97,7 @@ get_header(); ?>
         <!-- Botão "Ver Mais" -->
         <a href="/portfolio" class="btn-ver-mais" id="ver-mais">Ver Mais</a>
     </div>
+    <hr style="width: 44%">
 </section>
 
 <?php get_footer(); ?>

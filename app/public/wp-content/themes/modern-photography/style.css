@@ -136,7 +136,7 @@ width: 100%;
 
 /* ---- SECTION PORTFÓLIO ---- */
 .portfolio-section {
-  margin:0;
+  margin: 2rem 0 3rem 0;
 }
 .portfolio-container {
   max-width: 1200px;
@@ -162,6 +162,7 @@ width: 100%;
   flex-direction: column;
   align-items: center;
   width: 100%; /* Ocupa 100% da largura do grid */
+  margin-top: 1.5rem;
 }
 .portfolio-item a {
   display: block;
@@ -171,7 +172,7 @@ width: 100%;
 }
 .portfolio-item h3 {
   font-size: 1.3rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
   text-align: center;
 }
 .portfolio-item .card {
@@ -200,7 +201,7 @@ width: 100%;
   cursor: pointer;            /* Cursor de "mão" ao passar o mouse */
   transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
   width: 5rem;
-  margin: 3rem 0 1rem 0;
+  margin: 2.5rem 0 0 0;
 }
 .btn-ver-mais:hover {
   background-color: #3A403B;

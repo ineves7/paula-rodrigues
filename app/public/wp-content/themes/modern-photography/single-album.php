@@ -3,7 +3,7 @@ get_header();
 ?>
 
 <!-- Section ÁLBUM -->
-<section class="portfolio-section">
+<section class="single-album-section">
     <div class="portfolio-container">
         <h2><?php the_title(); ?></h2> <!-- Exibe o título do álbum -->
 
@@ -29,6 +29,7 @@ get_header();
             ?>
         </div>
     </div>
+    <hr style="width: 44%;">
 </section>
 
 <?php get_footer(); ?>
