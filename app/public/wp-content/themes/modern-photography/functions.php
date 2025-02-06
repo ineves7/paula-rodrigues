@@ -90,4 +90,21 @@ function cmb2_fields_home() {
         'id' => 'sobremim',
         'type' => 'textarea',
     ]);
+
+    $cmb2->add_field([
+        'name' => 'Sobre-Mim-2',
+        'id' => 'sobremim2',
+        'type' => 'textarea',
+    ]);
+    $cmb2->add_field([
+        'name' => 'Sobre-Mim-3',
+        'id' => 'sobremim3',
+        'type' => 'textarea',
+    ]);
+    $cmb2->add_field([
+        'name' => 'Foto-Sobre-Mim',
+        'id' => 'fotosobremim',
+        'type' => 'file',
+    ]);
+
 }

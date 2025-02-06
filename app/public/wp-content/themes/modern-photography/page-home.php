@@ -1,4 +1,7 @@
-<?php get_header(); ?>
+<?php ?>
+<?php 
+// Template Name: Home
+get_header(); ?>
 
 
     <!-- Section SOBRE MIM -->
