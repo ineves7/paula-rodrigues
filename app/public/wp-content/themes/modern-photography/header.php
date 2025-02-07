@@ -31,14 +31,20 @@
         </nav>
     </header>
     <!-- Banner -->
+    <?php
+        // Recupera a página "home" pelo slug
+        $home_page = get_page_by_path( 'home' );
+        if ( $home_page ) {
+            $home_id = $home_page->ID;
+            
+            $fotobanner = get_post_meta( $home_id, 'fotobanner', true );
+            $textobanner = get_post_meta( $home_id, 'textobanner', true );
+        }
+    ?>
     <div class="banner">
-        <img 
-            src="<?php echo get_template_directory_uri(); ?>/assets/img/banner1.png" 
-            alt="Banner 1"
-            class="banner-img"
-        />
+    <img class="banner-img" src="<?php echo esc_url( $fotobanner ); ?>" alt="Foto Banner">
         <div class="banner-content">
-          <h1>Creative Photography</h1>
+          <h1><?php echo !empty( $textobanner ) ? esc_html( $textobanner ) : 'Creative Photography'; ?></h1>
           <!-- <p>Eternizando momentos</p> -->
         </div>
     </div>

@@ -87,7 +87,7 @@ function cmb2_fields_home() {
 
     $cmb2->add_field([
         'name' => 'Banner',
-        'id' => 'banner',
+        'id' => 'fotobanner',
         'type' => 'file',
     ]);
 
